@@ -1,0 +1,136 @@
+body {
+  background-color: #fff6f9;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.pastel-navbar {
+  background-color: #fff0f6;
+  border-bottom: 2px solid #ffc0cb;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+form .form-control {
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #fdf6f0; /* light pastel */
+}
+
+form .btn {
+  border-radius: 20px;
+  background-color: #ffc8dd;
+  color: white;
+  border:none;
+}
+
+/* Header */
+.pastel-header {
+  background: linear-gradient(120deg, #ffe4e1, #e0ffff);
+  border-radius: 12px;
+  margin-top: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer */
+.pastel-footer {
+  background-color: #fff0f6;
+  color: #555;
+  border-top: 2px solid #ffc0cb;
+  margin-top: 40px;
+  padding: 15px 0;
+}
+
+/* Product Images */
+.card-img-top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.product-img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 250px;
+  scroll-snap-align: start;
+  border-radius: 10px;
+}
+
+.product-img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  scroll-snap-align: start;
+}
+/* Product Cards */
+.product-card {
+  border: 1px solid #ffd9e8;
+  background-color: #fffdfd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-outline-primary {
+  border-color: #f4a4c2;
+  color: #f4a4c2;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #f4a4c2;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #f4a4c2;
+  border-color: #f4a4c2;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e894b3;
+  border-color: #e894b3;
+}
+
+/* Typography */
+.card-title {
+  font-weight: 600;
+  color: #444;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.text-muted {
+  font-size: 0.9rem;
+color: #999;
+}
+.row.g-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem; 
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PastelCloset - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light pastel-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">PastelCloset</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center pastel-header py-5">
+    <h1>Clothing</h1>
+    <p class="lead">"Life isn’t perfect, but your outfit can be."</p>
+  </header>
+
+  <div class="container my-4">
+    <form id="searchForm" class="row g-2 align-items-center">
+      <!-- Search Input -->
+      <div class="col-6 col-sm-7 col-md-8">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search products..." />
+      </div>
+  
+      <!-- Sort Dropdown -->
+      <div class="col-3 col-sm-3 col-md-2">
+        <select id="sortSelect" class="form-select">
+          <option value="default">Sort By</option>
+          <option value="priceLowHigh">Price: Low to High</option>
+          <option value="priceHighLow">Price: High to Low</option>
+          <option value="ratingHighLow">Rating: High to Low</option>
+        </select>
+      </div>
+  
+      <!-- Search Button -->
+      <div class="col-3 col-sm-2 col-md-2">
+        <button type="submit" class="btn btn-outline-success w-100">Search</button>
+      </div>
+    </form>
+  </div>
+   
+  </form>
+  <!-- Products -->
+  <div class="container my-5">
+    <div class="row g-4">
+      
+      <!-- Product 1 -->
+      <div class="col-md-6">
+        <div class="card product-card h-100">
+          <img src="image/skirt1.jpg" class="card-img-top" alt="Bow Bodycon Mini Skirt">
+          <div class="card-body">
+            <h5 class="card-title">Bow Bodycon Mini Skirt</h5>
+            <p class="card-text">₹680 <s class="text-muted">₹999</s></p>
+            <a href="product1.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-12 col-sm-6 col-md-6 col-lg-6">
+        <div class="card product-card h-100">
+          <img src="image/short1.jpg" class="card-img-top" alt="Pink Ruffle Blouse">
+          <div class="card-body">
+            <h5 class="card-title">Denim Shorts</h5>
+            <p class="card-text">₹650  <s class="text-muted">₹1,100</s></p>
+            <a href="product2.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card product-card h-100">
+          <img src="image/dress1.jpg" class="card-img-top" alt="Pink Ruffle Blouse">
+          <div class="card-body">
+            <h5 class="card-title">Lace Ruffle Slip Dress</h5>
+            <p class="card-text">₹1,000   <s class="text-muted">₹1,299</s></p>
+            <a href="product3.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card product-card h-100">
+          <img src="image/dress3.jpg" class="card-img-top" alt="Pink Ruffle Blouse">
+          <div class="card-body">
+            <h5 class="card-title">Pink Floral Neckline Maxi Dress</h5>
+            <p class="card-text">₹1,299  <s class="text-muted">₹1,499</s></p>
+            <a href="product4.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card product-card h-100">
+          <img src="image/top1.jpg" class="card-img-top" alt="Pink Ruffle Blouse">
+          <div class="card-body">
+            <h5 class="card-title">Lightpink Ribbed Bardot Top</h5>
+            <p class="card-text">₹650 <s class="text-muted">₹799</s></p>
+            <a href="product5.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6">
+        <div class="card product-card h-100">
+          <img src="image/to3.jpg" class="card-img-top" alt="Pink Ruffle Blouse">
+          <div class="card-body">
+            <h5 class="card-title">Off-Shoulder Printed Mesh Top</h5>
+            <p class="card-text">₹699   <s class="text-muted">₹1,000</s></p>
+            <a href="product6.html" class="btn btn-outline-primary w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+
+     
+      
+
+
+      
+
+      <!-- Add more product cards (item3.jpg to item10.jpg) the same way -->
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center pastel-footer py-3">
+    <p>&copy; 2025 PastelCloset</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    const searchForm = document.getElementById('searchForm');
+    const searchInput = document.getElementById('searchInput');
+  
+    searchForm.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from refreshing
+  
+      const searchValue = searchInput.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('.product-card');
+  
+      let matchFound = false;
+  
+      cards.forEach(card => {
+        const title = card.querySelector('.card-title').textContent.toLowerCase();
+        if (title.includes(searchValue)) {
+          card.parentElement.style.display = 'block';
+          matchFound = true;
+        } else {
+          card.parentElement.style.display = 'none';
+        }
+      });
+  
+      if (!matchFound) {
+        alert("Sorry, no matching product found!");
+      }
+  });
+  </script>
+  
+</body>
+</html>
